@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.1.7//EN"
+	"http://struts.apache.org/dtds/struts-2.1.7.dtd">
+<struts>
+
+	<package name="adduser" namespace="/base" extends="struts-default">
+		<action name="adduser" class="adduser">
+			<result name="success">/jsp/ok1.jsp</result>
+			<result name="error">/jsp/error.jsp</result>
+		</action>
+	</package>
+	
+</struts>

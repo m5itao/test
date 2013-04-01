@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Struts2Diagram version="2.0">
+  <package name="default" location="10,10" size="225,119">
+    <action name="hsAction" location="65,47" size="150,62">
+      <result name="success">
+        <resourceEdge source="success" routing="0" target="ok.jsp" />
+      </result>
+      <result name="error">
+        <resourceEdge source="error" routing="0" target="error.jsp" />
+      </result>
+    </action>
+  </package>
+  <webResource name="ok.jsp" path="/jsp/ok.jsp" location="100,205" size="150,55" />
+  <webResource name="error.jsp" path="/jsp/error.jsp" location="344,30" size="150,55" />
+  <include file="../config/struts/struts1.xml" location="0,0" size="0,0" />
+</Struts2Diagram>
+

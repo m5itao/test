@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<project name="loongsoft" basedir="." default="compile">
+
+	<property name="dist" value="WebRoot/WEB-INF/classes"/>
+	<property name="src" value="src"/>
+	<property name="lib" value="WebRoot/WEB-INF/lib" />
+	
+	<path id="classpath">
+		<fileset dir="${lib}">
+			<include name="*.jar"/>
+		</fileset>
+		<pathelement path="${dist}"/>
+	</path>
+
+	<target name="compile" description="Compile all source code">
+		<delete dir="${dist}"/>
+		<mkdir dir="${dist}"/>
+		<copy todir="${dist}">
+			<fileset dir="${src}">
+				<exclude name="**/*.java"/>
+			</fileset>		
+		</copy>
+		<javac destdir="${dist}" debug="true" includeantruntime="yes"
+			deprecation="false" optimize="false" failonerror="true" encoding="UTF-8">
+			<src path="${src}"/>
+			<classpath refid="classpath"/>
+		</javac>
+		<echo message="compile finish" />
+	</target>
+
+</project>
